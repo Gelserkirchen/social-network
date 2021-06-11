@@ -1,0 +1,15 @@
+.usersPhoto {
+    width: 150px;
+    height: auto;
+}
+
+.selectedPhoto {
+    font-weight: bold;
+    color: blue;
+    padding-left: 5px;
+}
+
+.unselectedItem {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}

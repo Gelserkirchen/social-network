@@ -1,0 +1,22 @@
+a { color:white; }
+a:hover { color:blue; }
+.nav a { color:green; }
+
+.header {
+    grid-area: h;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    width: 80px;
+}
+
+.authLink{
+    color: white;
+    align-items: center;
+    margin-right: 50px;
+    padding-bottom: 5px;
+}
