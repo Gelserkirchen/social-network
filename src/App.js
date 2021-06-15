@@ -12,10 +12,9 @@ import {connect, Provider} from 'react-redux';
 import Preloader from './components/MultiComponents/Preloader';
 import { compose } from 'redux';
 import {appInit} from './redux/reducers/appReducer';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, HashRouter} from 'react-router-dom';
 import store from './redux/redux-store';
-// import DialogsContainer from './components/Dialoges/DialogsContainer';
-// import ProfileContainer from './components/Profile/ProfileContainer';
+
 const DialogsContainer = React.lazy(() => import('./components/Dialoges/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
 
@@ -67,11 +66,11 @@ let AppContainer = compose(
 )(App)
 
 let SocialNetworkApp = (props) => {
-  return <BrowserRouter>
+  return <HashRouter>
     <Provider store={store}>
         <AppContainer/>
     </Provider>
-  </BrowserRouter>
+  </HashRouter>
 }
 
 
