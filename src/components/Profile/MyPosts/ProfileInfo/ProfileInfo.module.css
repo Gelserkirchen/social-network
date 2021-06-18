@@ -9,3 +9,7 @@ img{
 .avatar{
     width: 200px;
 }
+
+.mainPhoto {
+    max-width: 200px;
+}
