@@ -37,7 +37,8 @@ const initialState = {
       large: null
     },
   },
-  status: ""
+  status: "",
+  authorisedUserId: 16637
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -65,7 +66,6 @@ const profileReducer = (state = initialState, action) => {
       }
 
     case SAVE_PHOTOS_SUCCESS:
-      debugger
       return {
         ...state,
         profile: {...state.profile, photos: action.photos}
@@ -88,8 +88,11 @@ export const getProfile = (userId) => {
 
 // Thunk for get profile 
 export const getProfileStatus = (userId) => {
+
   return async (dispatch) => {
     const response = await profileAPI.getStatus(userId)
+    debugger
+    console.log('data from getProfileStatus:', response.data)
     dispatch(getProfileStatusAction(response.data))
   }
 }

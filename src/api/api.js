@@ -32,11 +32,6 @@ export const usersAPI = {
         return response
     },
 
-    // // header container
-    // async authOnServer () {
-    //     const response = await axiosConfig.get(`auth/me`)
-    //     return response.data
-    // }
 }
 
 
@@ -60,7 +55,6 @@ export const profileAPI = {
     },
 
     async savePhoto (photoFile) {
-        //debugger
         let formData = new FormData();
         formData.append('image', photoFile)
         const response = await axiosConfig.put(`profile/photo`, formData, {

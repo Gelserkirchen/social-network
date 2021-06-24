@@ -5,6 +5,8 @@ import { render } from "@testing-library/react";
 
 const ProfileStatusWithHook = (props) => {
 
+  debugger
+
   const [editStatus, setEditStatus] = useState(false)
   const [status, updateStatus] = useState(props.status)
 

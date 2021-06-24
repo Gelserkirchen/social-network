@@ -3,7 +3,6 @@ import ProfileInfo from './MyPosts/ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
 
 const Profile = (props) => {
-  debugger
   console.log('props in pofile', props)
 
   return (
